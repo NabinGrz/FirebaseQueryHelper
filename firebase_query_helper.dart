@@ -14,7 +14,9 @@ class FirebaseHelper {
   final FirebaseFirestore _firestore;
 
   FirebaseHelper(this._firestore);
-
+  // Without dependency Injection
+  // final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  
   // Get a single document from Firestore
   Future<DocumentSnapshot?> getDocument(
       String collectionPath, String documentId) async {
